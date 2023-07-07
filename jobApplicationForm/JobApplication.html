@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobApplicationForm</title>
+    <style>
+    *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+    }
+    .container{
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    .applyBox{
+        max-width: 600px;
+        padding: 20px;
+        background-color: bisque;
+        margin-top: 50px;
+        box-shadow: 4px 3px 5px black;
+        border-radius: 10px;
+    }
+    body{
+        background-color: gray;
+    }
+    .smallTitle{
+        font-size: x-large;
+    }
+    .formContainer{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px ,1fr));
+        gap: 20px;
+    }
+    .formControl{
+        display: flex;
+        flex-direction: column;
+    }
+    label{
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    input , select,textarea{
+        padding: 6px 10px;
+        border: ipx solid gray;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+    input:focus{
+        outline-color: red;
+    }
+    .button_container{
+        display: flex;
+        justify-content: end;
+
+    }
+    button{
+        background-color: red;
+        border: 2px transparent;
+        padding: 5px 10px;
+        color: white;
+        border-radius: 8px;
+        transition: 0.3s, ease-out;
+
+    }
+    button:hover{
+        background-color: gray;
+        border: 2px solid red;
+        color: black;
+        transition: 0.3s, ease-out;
+        cursor: pointer;
+    }
+    .textareaControl{
+     grid-column: 1 /span 2;
+    }
+    .textareaControl textarea{
+        width: 100%;
+    }
+    @media(max-width: 460px){
+        
+    };
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="applyBox">
+<h1> JOB APPLICATION  <SPAn class="smallTitle">(WEB)</SPAn></h1>
+<form action="">
+    <div class="formContainer">
+        <div class="formControl">
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" placeholder="enter first name">
+        </div>
+        <div class="formControl">
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" placeholder="enter last name">
+        </div>
+        <div class="formControl">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="enter your email">
+        </div>
+            <div class="formControl">
+                <label for="job_role">Job Role</label>
+                <select name="" id="job_role">
+                    <option value="">Select Job Role</option>
+                    <option value="FrontEnd Developer"> FrontEnd Developer</option>
+                    <option value="BackEnd Developer"> BackEnd Developer</option>
+                    <option value="Java Developer"> Java Developer</option>
+
+                    <option value="Full Stack Developer"> Full Stack Developer</option>
+                </select>
+             </div>
+             <div class="textareaControl">
+                <label for="address">Address</label>
+                <textarea name="address" id="address" cols="30" rows="4" placeholder="enter address"></textarea>
+            </div>
+            <div class="formControl">
+                <label for="city">City Name</label>
+                <input type="text" id="city" placeholder="enter city name">
+            </div>
+            <div class="formControl">
+                <label for="pin code">Pin Code</label>
+                <input type="number" id="pin code" placeholder="enter pin code">
+
+            </div>
+            <div class="formControl">
+                <label for="date">Date</label>
+                <input type="date" id="date" value="2023-01-01">
+                <!-- in date type in value atrt with year -->
+
+            </div>
+            <div class="formControl">
+                <label for="file">CV</label>
+                <input type="file" id="file" placeholder="">
+            </div>
+    </div>
+    <div class="button_container">
+        <button type="submit">Apply Now</button>
+    </div>
+</form>
+
+        </div>
+    </div>
+</body>
+</html>
